@@ -1,7 +1,7 @@
 -- // Index Versinn // --
 local mt = getrawmetatable(game)
 local backupindex = mt.__index
-local ValiantAimHacks = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ripacid/ripacid/master/gay.lua"))()
+local ValiantAimHacks = loadstring(game:HttpGetAsync(""))()
 ValiantAimHacks["TeamCheck"] = false
 setreadonly(mt, false)
 
