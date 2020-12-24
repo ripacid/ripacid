@@ -36,7 +36,7 @@ function ValiantAimHacks.updateCircle()
         circle.Visible = ValiantAimHacks["ShowFOV"]
         circle.Thickness = 2
         circle.Color = Color3.fromRGB(231, 84, 128)
-        circle.NumSides = 12
+        circle.NumSides = 20
         circle.Radius = (ValiantAimHacks["FOV"] * 6) / 2
         circle.Filled = false
         circle.Position = Vector2.new(Mouse.X, Mouse.Y + (GuiService.GetGuiInset(GuiService).Y))
