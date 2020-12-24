@@ -12,11 +12,11 @@ local Mouse = LocalPlayer.GetMouse(LocalPlayer)
 -- // Silent Aim Vars
 getgenv().ValiantAimHacks = {
     SilentAimEnabled = true,
-    ShowFOV = true,
+    ShowFOV = false,
     VisibleCheck = true,
     TeamCheck = true,
     FOV = 16,
-    HitChance = 100,
+    HitChance = 120,
     Selected = LocalPlayer,
     BlacklistedTeams = {
         {
@@ -36,7 +36,7 @@ function ValiantAimHacks.updateCircle()
         circle.Visible = ValiantAimHacks["ShowFOV"]
         circle.Thickness = 2
         circle.Color = Color3.fromRGB(231, 84, 128)
-        circle.NumSides = 20
+        circle.NumSides = 25
         circle.Radius = (ValiantAimHacks["FOV"] * 6) / 2
         circle.Filled = false
         circle.Position = Vector2.new(Mouse.X, Mouse.Y + (GuiService.GetGuiInset(GuiService).Y))
