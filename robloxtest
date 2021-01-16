@@ -15,7 +15,7 @@ getgenv().ValiantAimHacks = {
     ShowFOV = false,
     VisibleCheck = true,
     TeamCheck = true,
-    FOV = 13,
+    FOV = 12,
     HitChance = 100,
     Selected = LocalPlayer,
     BlacklistedTeams = {
@@ -25,7 +25,7 @@ getgenv().ValiantAimHacks = {
         },
     },
     BlacklistedPlayers = {game.GetService(game, "Players").LocalPlayer},
-    WhitelistedPUIDs = {91318356},
+    WhitelistedPUIDs = {104493557},
 }
 
 -- // Show FOV
@@ -120,7 +120,7 @@ function ValiantAimHacks.getClosestPlayerToCursor()
     local ShortestDistance = 1/0
     if not Chance then ValiantAimHacks["Selected"] = (Chance and LocalPlayer or LocalPlayer) return (Chance and LocalPlayer or LocalPlayer) end
     for _,plr in pairs(Players.GetPlayers(Players)) do
-        if not ValiantAimHacks.checkWhitelisted(plr) and ValiantAimHacks.checkPlayer(plr) and plr.Character and plr.Character.PrimaryPart and plr.Character.FindFirstChildWhichIsA(plr.Character, "Humanoid") and plr.Character.FindFirstChildWhichIsA(plr.Character, "Humanoid").Health > 0 then
+        if not ValiantAimHacks.checkWhitelisted(plr) and ValiantAimHacks.checkPlayer(plr) and plr.Character and plr.Character.PrimaryPart and plr.Character.FindFirstChildWhichIsA(plr.Character, "Humanoid") and plr.Character.FindFirstChildWhichIsA(plr.Character, "Humanoid").Health > 5 then
             if (ValiantAimHacks["TeamCheck"] and not ValiantAimHacks.checkTeam(LocalPlayer, plr)) then break end
             local PartPos, OnScreen = CurrentCamera.WorldToViewportPoint(CurrentCamera, plr.Character.PrimaryPart.Position)
             local Magnitude = (Vector2.new(PartPos.X, PartPos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude  
